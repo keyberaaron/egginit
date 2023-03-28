@@ -1,0 +1,11 @@
+git init
+git remote add https://github.com/keyberaaron/egginit.git
+git remote -v
+git config -l
+clear
+git config --global credential.helper wincred
+git config --global user.name "keyberaaron"
+git config --global user.email "keyberaaron@gmail.com"
+git config --list
+git init
+
