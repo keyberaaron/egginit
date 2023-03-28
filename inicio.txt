@@ -1,11 +1,39 @@
 git init
-git remote add https://github.com/keyberaaron/egginit.git
+git remote add https://github.com/keyberaaron/egginit.git ó git remote add origin https://github.com/keyberaaron/egginit.git
 git remote -v
-git config -l
+git config -l ó git config --list
 clear
 git config --global credential.helper wincred
 git config --global user.name "keyberaaron"
 git config --global user.email "keyberaaron@gmail.com"
-git config --list
 git init
+git status
+git add keyber.txt ó git add . (todo)
+git commit -m "version 0.1"
+git branch -M main
+git remote add origin https://github.com/keyberaaron/egginit.git
+git push -u origin main
+git push origin master
+esc y luego :wq para salir
+git log (historial)
+git diff (diferencias entre el commit anterior y el actual)
+
+Para clonar repositorio externo en localhost:
+
+creamos la carpeta en nuestra pc donde traeremos todo el repositorio
+entramos con git bash y ejecutamos:
+
+git init
+git remote add origin https://github.com/keyberaaron/egginit.git
+git remote -v
+git pull origin master
+git fetch (traer las ramas)
+git checkout <rama> para ubicarnos en esa rama a trabajar
+
+
+ó
+
+git clone https://github.com/keyberaaron/egginit.git
+
+
 
