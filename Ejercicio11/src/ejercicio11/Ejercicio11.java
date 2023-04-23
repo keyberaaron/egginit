@@ -19,40 +19,45 @@ public class Ejercicio11 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+    Scanner leer = new Scanner(System.in);
     Scanner lee = new Scanner(System.in);
     
     System.out.println("Intruduzca 1er Numero: ");
-    int num1 = lee.nextInt();
+    int num1 = leer.nextInt();
     
     System.out.println("Intruduzca 2do Numero: ");
-    int num2 = lee.nextInt();
+    int num2 = leer.nextInt();
     int retorno;
     String res;
     
-    boolean terminar = true;
+    boolean continuar = true;
    
-    while (terminar) {
+    while (continuar) {
         retorno = menu (num1, num2); //Llamo a mi funcion menu
+      if (retorno != 5)  
         switch (retorno)
         {
-                case (1): { System.out.println("La Suma es: "+(num1+num2)); terminar = false; break; }    
-                case (2): { System.out.println("La Resta es: "+(num1-num2)); terminar = false; break; }
-                case (3): { System.out.println("La Multiplicacion es: "+(num1*num2)); terminar = false; break; }
-                case (4): { System.out.println("La Division es: "+(num1/num2)); terminar = false; break; }
-                case (5): { System.out.println("Esta seguro que desea salir del programa? S / N"); 
-                            res = lee.nextLine();
-                            if (res == "S"){ System.out.println(res); terminar = true; break;}
-                          }
-        }                       
-    }   
-}    
-    
+                case (1): { System.out.println("La Suma es: "+(num1+num2)); continuar = true; break; }    
+                case (2): { System.out.println("La Resta es: "+(num1-num2)); continuar = true; break; }
+                case (3): { System.out.println("La Multiplicacion es: "+(num1*num2)); continuar = true; break; }
+                case (4): { System.out.println("La Division es: "+(num1/num2)); continuar = true; break; }
+        } 
+      else {
+          System.out.println("Esta seguro que desea salir del programa? S / N"); 
+          res = lee.nextLine();
+          if (res.toUpperCase().equals("S")) continuar = false; 
+          else  System.out.println("Para Salir introduzca S..."); 
+      }
+    } 
+  } 
+   
 public static int menu (int num1, int num2) {
     Scanner leer = new Scanner(System.in);
     int opcion;
-    
     //MENU
     do { 
+        System.out.println("");
+        System.out.println("");
         System.out.println("*******************************");
         System.out.println("****|       MENU       |*******");
         System.out.println("****|  (1) SUMAR       |*******");

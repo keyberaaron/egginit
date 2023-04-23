@@ -23,12 +23,11 @@ public class Ejercicio3 {
     
     public static void main(String[] args) {
     Scanner leer = new Scanner(System.in);
-    
-        System.out.println("Ingrese Frase: ");
-        String frase = leer.nextLine();
-        
-        System.out.println("En Minusculas: "+frase.toLowerCase());
-        System.out.println("En Mayusculas: "+frase.toUpperCase());
+    int resto;
+            resto = 15 % 5;
+            
+            
+            System.out.println(resto);
     }
     
 }
